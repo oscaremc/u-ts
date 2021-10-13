@@ -79,3 +79,58 @@
 
 
 })();
+
+
+( () => {
+
+    // DESTRUCTURACION TRADICIONAL
+    const avengers = {
+        nick: 'Samuel L. Jackson', 
+        ironman: 'Robert Downey Jr', 
+        vision: 'Paul Bettany',
+        activo: true, 
+        poder: 1500.123534
+    }
+
+    const {poder, vision} = avengers
+
+    console.log(poder.toFixed(2), vision.toUpperCase())
+    
+})();
+
+( () => {
+    // DESCTUCTURACION PARA FUNCION
+    type Avengers = {
+        nick: string;
+        ironman: string;
+        vision: string;
+        activo: boolean;
+        poder: number;  
+    }
+
+    const avengers: Avengers = {
+        nick: 'Samuel L. Jackson', 
+        ironman: 'Robert Downey Jr', 
+        vision: 'Paul Bettany',
+        activo: true, 
+        poder: 1500.123534
+    }
+
+    const printAvenger = ({ ironman, ...resto }: Avengers ) => {
+        console.log(ironman, resto)
+    }
+
+    printAvenger(avengers);
+
+})();
+
+( () => {
+    const avengersArr: [string, boolean, number ] = ['Cap. America', true, 150.15]; 
+
+    const[ , ironman,  ] = avengersArr; 
+    console.log({ironman})
+
+    
+    const[ , , hulk] = avengersArr; 
+    console.log({hulk})
+})();
