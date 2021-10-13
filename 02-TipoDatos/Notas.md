@@ -58,3 +58,24 @@ ARRAYS en TypeScript
     
 
 })()
+
+// TUPLAS de Javascript! 
+
+( () => {
+
+    
+    const arrs = [ 'Dr Strange', 100 ];  // (number | string) pero no es tupla sigue siendo un array 
+
+    console.log({arrs});
+
+    //las tuplas son: 
+    const tupla: [string, number] = ['Dr Strange', 100];    //creamos las tuplas asignando por tipo y ubicacion
+
+    tupla[0] = 'Ironman';           //podemos cambiar los valores y solo string
+    tupla[1] = 50;                  //podemos cambiar los valores pero solo number
+
+    console.log({tupla});
+
+    
+
+})()
