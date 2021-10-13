@@ -1,15 +1,26 @@
-( () => {
-    let flash: { name: string, age?: number, powers:  string[] } = {
-        name: 'Barry Allen',
-        age: 24, 
-        powers: ['Super velocidad', 'Viajar en el tiempo']
-    }
+Objetos en TypeScript! 
 
-    console.log(flash)
-})();
+sintaxis: 
 
-( () => {
-    let flash: { name: string, age?: number, powers:  string[], getName?: () => string } = {    //se agrega el tipo para recibir una funcion de forma opcional
+variable nombreVariable: {tipoVaribable: valorTipo} = {
+    contenido variable
+}
+
+Especificar los tipos en los objetos obliga al desarrollador a poner el mismo contendio y cuidar de su valor
+
+let flash: { name: string, age?: number, powers:  string[] } = {   // el simbolo ? de permite ser un valor opcional opcional
+    name: 'Barry Allen',
+    age: 24, 
+    powers: ['Super velocidad', 'Viajar en el tiempo']
+}
+
+console.log(flash)
+
+
+si quisieramos agregar mas elementos al objeto y si este fuera una funcion una opcion para realizarlo puede ser: 
+
+
+let flash: { name: string, age?: number, powers:  string[], getName?: () => string } = {    //se agrega el tipo para recibir una funcion de forma opcional
         name: 'Barry Allen',
         age: 24, 
         powers: ['Super velocidad', 'Viajar en el tiempo']
@@ -26,9 +37,8 @@
 
     console.log( flash )
 
-})();
 
-( () => {
+si notamos que los tipos de los objetos son complicados de leer por lo largos como buena practica se debe extraer una variable donde hay una palabra recervada para eso que se llama "Type", esta buena practica nos permite ahorrar trabajo en caso que este mismo tipo de repita en diferentes objetos.
 
     type Hero = {
         name: string; 
@@ -51,19 +61,17 @@
     }
 
 
-})();
+    Una variable puede tener diferentes tipos entre ella objetos: 
 
-
-( () => {
-
-    type Hero = {
+    
+    type Hero = {                   //tipo para un objeto 
         name: string; 
         age?: number; 
         powers: string[];
         getName?: () => string; 
     }
 
-    let myCustomVariable: (string | number | Hero) = 'Fernando'; 
+    let myCustomVariable: (string | number | Hero) = 'Fernando';  //variable que recibe diferentes tipos 
     console.log(typeof myCustomVariable)
 
     myCustomVariable = 20
@@ -77,5 +85,3 @@
     console.log(typeof myCustomVariable)
     console.log(myCustomVariable)
 
-
-})();
