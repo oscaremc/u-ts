@@ -185,8 +185,10 @@ son clases que me permite crear un una clase generica y por aparte poder enviarl
             return this.address.city;
         }
     }
-
-
-
-
 })()
+
+
+
+CLASES EN LA INTERFAZ
+
+
