@@ -1,4 +1,5 @@
 "use strict";
+// Definicion de un namespace
 var Validations;
 (function (Validations) {
     Validations.validateText = function (text) {
