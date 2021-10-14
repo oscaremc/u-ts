@@ -92,3 +92,22 @@ var __rest = (this && this.__rest) || function (s, e) {
     var hulk = avengersArr[2];
     console.log({ hulk: hulk });
 })();
+(function () {
+    var ironman = {
+        name: 'Ironman',
+        weapon: 'Armorsuit'
+    };
+    var captainAmerica = {
+        name: 'Capitán América',
+        weapon: 'Escudo'
+    };
+    var thor = {
+        name: 'Thor',
+        weapon: 'Mjolnir'
+    };
+    var avengers = [ironman, thor, captainAmerica];
+    for (var _i = 0, avengers_1 = avengers; _i < avengers_1.length; _i++) {
+        var avenger = avengers_1[_i];
+        console.log(avenger.name, avenger.weapon);
+    }
+})();

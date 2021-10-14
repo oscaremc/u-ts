@@ -167,3 +167,41 @@ console.log({ironman})
 const[ , , hulk] = avengersArr; 
 console.log({hulk})
 
+
+
+CICLO FOR
+>> forOf 
+
+Teniendo un arreglo llamado avengers que llama a diferentes objetos podemos recorrerlos con la la palagra reservada forOf que nos arroja una estructura de codigo como;
+
+for (const "variable" of "arreglo") {
+    Contendio del for;
+}
+
+y segun el ejemplo podemos usar en codigo este for de la siguiente manera.
+
+type Avenger = {
+    name: string,
+    weapon: string;
+}
+
+const ironman: Avenger = {
+    name: 'Ironman',
+    weapon: 'Armorsuit'
+}
+
+const captainAmerica: Avenger = {
+    name: 'Capitán América',
+    weapon: 'Escudo'
+}
+
+const thor: Avenger = {
+    name: 'Thor',
+    weapon: 'Mjolnir'
+}
+
+const avengers: Avenger[] = [ ironman, thor, captainAmerica ];
+
+for (const avenger of avengers) {
+    console.log(avenger.name, avenger.weapon );
+}
