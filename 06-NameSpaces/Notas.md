@@ -54,3 +54,28 @@ console.log(ironman)
 
 Hero {name: 'Ironman', powerId: 1, age: 55}
 
+
+FUNCIONES GENERICAS
+son las funciones que no tiene un tipo de dato especifico por que tiene la forma de evaluar el tipo de dato de entrada y de acuerdo a ello puede proveer el tipo de dato de salida. 
+
+>> ts-node>generica.ts
+
+export function genericFunction<T>( argument: T ): T {
+    return argument; 
+}
+
+export const genericFuntionArrow = <T>( argument: T ) => argument; 
+
+
+luego importamos estas funciones en:
+>> ts-node> index.js
+
+
+import { genericFuntionArrow } from './generics/generics';
+
+const name: string = 'Fernando';
+
+console.log(genericFuntionArrow(3.141618).toFixed(2));
+console.log(genericFuntionArrow(name).toUpperCase);
+console.log(genericFuntionArrow(new Date()).getDate());
+
